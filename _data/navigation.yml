@@ -1,0 +1,70 @@
+﻿# WebKernel Navigation Structure
+# Grouped categories for sidebar (desktop) and drawer (mobile)
+
+main:
+  - title: "Home"
+    url: "/"
+    
+  - title: "About"
+    children:
+      - title: "Overview"
+        url: "/about/"
+      - title: "Architecture"
+        url: "/architecture/"
+      - title: "Principles"
+        url: "/principles/"
+        
+  - title: "Governance"
+    children:
+      - title: "Standards"
+        url: "/governance/standards/"
+      - title: "Witness Cycles"
+        url: "/governance/witness/"
+      - title: "Requests"
+        url: "/governance/requests/"
+      - title: "Golden Trace"
+        url: "/governance/golden-trace/"
+        
+  - title: "Research"
+    children:
+      - title: "Academic Node"
+        url: "https://mit.portussophia.com"
+        external: true
+      - title: "Postulates"
+        url: "/research/postulates/"
+      - title: "Methods"
+        url: "/research/methods/"
+        
+  - title: "Engineering"
+    children:
+      - title: "Lab Node"
+        url: "https://lab.portussophia.com"
+        external: true
+      - title: "CI Workflows"
+        url: "/engineering/ci/"
+      - title: "Topology"
+        url: "/engineering/topology/"
+        
+  - title: "Nodes"
+    children:
+      - title: "Public Orientation"
+        url: "https://public.portussophia.com"
+        external: true
+      - title: "Founder Identity"
+        url: "https://founder.portussophia.com"
+        external: true
+      - title: "MIT Academic"
+        url: "https://mit.portussophia.com"
+        external: true
+      - title: "Lab (Governance & Engineering)"
+        url: "https://lab.portussophia.com"
+        external: true
+        
+  - title: "Support"
+    children:
+      - title: "Contact"
+        url: "/contact/"
+      - title: "Contributing"
+        url: "/contributing/"
+      - title: "License"
+        url: "/LICENSE"

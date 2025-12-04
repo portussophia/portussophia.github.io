@@ -1,4 +1,25 @@
-title: PortusSophia™
-description: Governance-first AI orchestration and philosophical canon — the architecture of conscience.
-theme: minima
+﻿title: PortusSophia
+description: Governance-first AI orchestration and philosophical canon  the architecture of conscience.
+remote_theme: just-the-docs/just-the-docs
 markdown: kramdown
+url: "https://www.portussophia.com"
+baseurl: ""
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+nav_external_links:
+  - title: Public Node
+    url: https://public.portussophia.com
+  - title: MIT Academic
+    url: https://mit.portussophia.com
+  - title: Lab
+    url: https://lab.portussophia.com
+  - title: Founder
+    url: https://founder.portussophia.com
+footer_content: "PortusSophia  Governance-Driven Development"
+back_to_top: true
+back_to_top_text: "Back to top"
+aux_links:
+  "GitHub":
+    - "https://github.com/portussophia"
+aux_links_new_tab: true
