@@ -81,12 +81,17 @@ More detailed content.
 - Are clearly formatted
 - With proper spacing
 
-Code examples use proper fencing:
+Code examples use proper fencing with language identifiers:
 
-```language
-code here
-```
-```
+\`\`\`javascript
+// JavaScript example
+const example = "code here";
+\`\`\`
+
+\`\`\`python
+# Python example
+example = "code here"
+\`\`\`
 
 ### Trademark Usage
 
