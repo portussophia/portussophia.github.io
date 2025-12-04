@@ -1,0 +1,7 @@
+{
+  "$schema": "./validators/mentors_schema.json",
+  "version": "v0.1",
+  "last_updated": "2025-12-03",
+  "description": "PortusSophia Mentor Registry — Steward roles, expertise domains, content involvement tracking",
+  "mentors": []
+}

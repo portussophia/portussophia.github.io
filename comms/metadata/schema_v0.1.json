@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PortusSophia Content Metadata Schema",
+  "description": "Cross-platform content metadata standard for all PortusSophia communications assets",
+  "version": "v0.1",
+  "type": "object",
+  "required": ["content_id", "title", "dimension", "audience", "platforms", "tone", "created_date"],
+  "properties": {
+    "content_id": {
+      "type": "string",
+      "description": "Unique identifier for content asset (format: COMMS-XXX-YYYYMMDD)",
+      "pattern": "^COMMS-[0-9]{3}-[0-9]{8}$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Content title or headline",
+      "minLength": 5,
+      "maxLength": 200
+    },
+    "dimension": {
+      "type": "array",
+      "description": "Philosophical dimensionality focus (1D-5D)",
+      "items": {
+        "type": "string",
+        "enum": ["1D", "2D", "3D", "4D", "5D"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "audience": {
+      "type": "array",
+      "description": "Target audience segments",
+      "items": {
+        "type": "string",
+        "enum": ["General", "Academic", "Philosophical", "Technical", "Community", "Patrons"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "platforms": {
+      "type": "array",
+      "description": "Target distribution platforms",
+      "items": {
+        "type": "string",
+        "enum": ["YouTube", "Instagram", "X", "Bluesky", "Threads", "Facebook", "Patreon", "Website"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "tone": {
+      "type": "string",
+      "description": "Content tone classification",
+      "enum": ["Educational", "Reflective", "Technical", "Celebratory", "Analytical", "Narrative"]
+    },
+    "canon_anchor": {
+      "type": "string",
+      "description": "Optional reference to source canonical document (e.g., PS-CAN-160)",
+      "pattern": "^(PS-CAN-[0-9]{3}|PS-STD-[0-9]{3}|Trilogia|SubCanonII)?$"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Freeform content tags",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9_]+$"
+      },
+      "uniqueItems": true
+    },
+    "created_date": {
+      "type": "string",
+      "description": "Content creation date (ISO 8601)",
+      "format": "date"
+    },
+    "publish_date": {
+      "type": "string",
+      "description": "Scheduled or actual publish date (ISO 8601)",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "description": "Content lifecycle status",
+      "enum": ["draft", "review", "approved", "published", "archived"],
+      "default": "draft"
+    },
+    "mentors": {
+      "type": "array",
+      "description": "Steward/mentor involvement",
+      "items": {
+        "type": "string",
+        "enum": ["Sara", "Daniel", "Draco", "LOGOS", "Peter"]
+      },
+      "uniqueItems": true
+    },
+    "duration_seconds": {
+      "type": "integer",
+      "description": "Content duration for video/audio (seconds)",
+      "minimum": 0
+    },
+    "language": {
+      "type": "string",
+      "description": "Primary content language",
+      "enum": ["English", "Latin", "Bilingual"],
+      "default": "English"
+    },
+    "engagement_goals": {
+      "type": "array",
+      "description": "Intended engagement outcomes",
+      "items": {
+        "type": "string",
+        "enum": ["Education", "Growth", "Community", "Funding", "Awareness", "Clarification"]
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or context",
+      "maxLength": 1000
+    }
+  }
+}
